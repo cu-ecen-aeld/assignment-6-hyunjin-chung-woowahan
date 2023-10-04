@@ -1,6 +1,8 @@
 # See https://git.yoctoproject.org/poky/tree/meta/files/common-licenses
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
+
+# Set due to "libgcc_s.so.1 must be installed for pthread_cancel to work" error
 RDEPENDS:${PN} += "libgcc"
 
 # TODO: Set this  with the path to your assignments rep.  Use ssh protocol and see lecture notes
